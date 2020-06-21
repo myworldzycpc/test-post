@@ -6,12 +6,18 @@ var urlParmStr = url.slice(url.indexOf('?')+1);//获取问号后所有的字符�
 
 var arr = urlParmStr.split('&');//通过&符号将字符串分割转成数组
 
-var courseId = arr[0].split("=")[1];//获取数组中第一个参数
+var keys = arr[0].split("=")[1];//获取数组中第一个参数
 
-var unit_title=arr[1].split("=")[1];//第二个参数
+var values=arr[1].split("=")[1];//第二个参数
 
-unit_title=decodeURI(unit_title);//转码将解码方式unscape换为decodeURI，将中文参数获取
+value=decodeURI(unit_title);//转码将解码方式unscape换为decodeURI，将中文参数获取
+for (i = 0; i < keys.length; i++) { 
+  keysh += keys[i] + "<br>";
+}
+for (i = 0; i < values.length; i++) { 
+  valuesh += values[i] + "<br>";
+}
 
-console.log(unit_title);
+document.write("<h1>keys</h1><br>" + keysh + "<h1>values</h1><br>" + valuesh)
 
 </script>

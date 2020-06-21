@@ -1,25 +1,17 @@
 v2.0
 
-<script language="javascript" >
-
-var url = document.location.toString();//获取url地址
-
-var urlParmStr = url.slice(url.indexOf('?')+1);//获取问号后所有的字符串
-
-var arr = urlParmStr.split('&');//通过&符号将字符串分割转成数组
-
-var keys = arr[0].split("=")[1];//获取数组中第一个参数
-
-var values=arr[1].split("=")[1];//第二个参数
-
-value=decodeURI(unit_title);//转码将解码方式unscape换为decodeURI，将中文参数获取
-for (i = 0; i < keys.length; i++) { 
-  keysh += "<p>" + keys[i] + "</p><br>";
-}
-for (i = 0; i < values.length; i++) { 
-  valuesh += "<p>" + values[i] + "</p><br>";
-}
-
-document.write("<h1>keys</h1><br>" + keysh + "<h1>values</h1><br>" + valuesh)
-
+<script>
+  var url = document.location.toString();//获取url地址
+  var urlParmStr = url.slice(url.indexOf('?')+1);//获取问号后所有的字符串
+  var arr = urlParmStr.split('&');//通过&符号将字符串分割转成数组
+  var keys = arr[0].split("=")[1];//获取数组中第一个参数
+  var values=arr[1].split("=")[1];//第二个参数
+  value=decodeURI(unit_title);//转码将解码方式unscape换为decodeURI，将中文参数获取
+  for (i = 0; i < keys.length; i++) { 
+    keysh += "<p>" + keys[i] + "</p><br>";
+  }
+  for (i = 0; i < values.length; i++) { 
+    valuesh += "<p>" + values[i] + "</p><br>";
+  }
+  document.write("<h1>keys</h1><br>" + keysh + "<h1>values</h1><br>" + valuesh)
 </script>

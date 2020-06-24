@@ -2,6 +2,7 @@ v4
 
 <script>
   var url = document.location.toString();//获取url地址
+  window.alert(url)
   var urlParmStr = url.slice(url.indexOf('?')+1);//获取问号后所有的字符串
   var arr = urlParmStr.split('&');//通过&符号将字符串分割转成数组
   var keys = arr[0].split("=")[1];//获取数组中第一个参数

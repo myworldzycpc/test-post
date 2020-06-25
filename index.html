@@ -4,7 +4,7 @@ v9
   var url = document.location.toString();//获取url地址
   window.alert(url);
   function btn(){
-    location.href='https://myworldzycpc.github.io/test-post/'+(document.getElementById("pw").value);
+    location.href='https://myworldzycpc.github.io/test-post/?'+(document.getElementById("pw").value);
   }
   if ( url.indexOf('?') == (-1) ){
     document.write("<h1>请输入密码</h1><br><input id=\"pw\"  type=\"text\" placeholder=\"请输入密码\" /><br><button onclick=\"btn()\">确定</button>");

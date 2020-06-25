@@ -2,18 +2,18 @@ v9
 <br>
 <script>
   var url = document.location.toString();//获取url地址
-  window.alert(url)
+  window.alert(url);
   function btn(){
-    location.href='https://myworldzycpc.github.io/test-post/'+document.getElementById("pw").value
+    location.href='https://myworldzycpc.github.io/test-post/'+(document.getElementById("pw").value);
   }
   if ( url.indexOf('?') == (-1) ){
-    document.write("<h1>请输入密码</h1><br><input id=\"pw\"  type=\"text\" placeholder=\"请输入密码\" /><br><button onclick="btn()">确定</button>")
+    document.write("<h1>请输入密码</h1><br><input id=\"pw\"  type=\"text\" placeholder=\"请输入密码\" /><br><button onclick=\"btn()\">确定</button>");
   }else{
     var urlParmStr = url.slice(url.indexOf('?')+1);//获取问号后所有的字符串
     if (urlParmStr==123456){
-      document.write("<h1>密码输入正确！</h1>")
+      document.write("<h1>密码输入正确！</h1>");
     }else{
-      document.write("<h1>密码输入错误！</h1><button onclick=\"location.href='https://myworldzycpc.github.io/test-post/'\" type=\"button\"> 重新输入 </button>")
+      document.write("<h1>密码输入错误！</h1><button onclick=\"location.href='https://myworldzycpc.github.io/test-post/'\" type=\"button\"> 重新输入 </button>");
     }
   }
 </script>

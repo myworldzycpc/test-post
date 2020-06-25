@@ -7,30 +7,7 @@ v6
   var urlParmStr = url.slice(url.indexOf('?')+1);//获取问号后所有的字符串
   window.alert(urlParmStr)
   
-  var arr = urlParmStr.split('&');//通过&符号将字符串分割转成数组
-  window.alert(arr)
-  
-  var keys = arr[0].split("=")[1];//获取数组中第一个参数
-  window.alert(keys)
-  
-  var values=arr[1].split("=")[1];//第二个参数
-  window.alert(values)
-  
-  value=decodeURI(unit_title);//转码将解码方式unscape换为decodeURI，将中文参数获取
-  window.alert(value)
-  
-  for (i = 0; i < keys.length; i++) { 
-    keysh += "<p>" + keys[i] + "</p><br>";
-  }
-  window.alert(keysh)
-  
-  for (i = 0; i < values.length; i++) { 
-    valuesh += "<p>" + values[i] + "</p><br>";
-  }
-  window.alert(valuesh)
-  
-  window.alert("<h1>keys</h1><br>" + keysh + "<h1>values</h1><br>" + valuesh)
-  document.write("<h1>keys</h1><br>" + keysh + "<h1>values</h1><br>" + valuesh)
+  document.write(urlParmStr)
 </script>
 <noscript>
   不支持！
